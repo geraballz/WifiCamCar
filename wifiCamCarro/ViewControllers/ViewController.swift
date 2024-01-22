@@ -6,27 +6,21 @@
 //
 
 import UIKit
-import AudioToolbox
 import WebKit
 import SwiftyUserDefaults
 import TactileSlider
 
 class ViewController: UIViewController {
 
-    //@IBOutlet weak var lightSlider: UISlider!
-    //@IBOutlet weak var speedSlider: UISlider!
     @IBOutlet weak var speakerView: UIView!
     @IBOutlet weak var downView: UIView!
     @IBOutlet weak var upView: UIView!
     @IBOutlet weak var leftView: UIView!
     @IBOutlet weak var rightView: UIView!
     @IBOutlet weak var topPreviewView: UIView!
-    //@IBOutlet weak var speedView: UISlider!
     @IBOutlet weak var speedTactileSlider: TactileSlider!
-    
     @IBOutlet weak var indicatorView: UIActivityIndicatorView!
     @IBOutlet weak var previewStreamingUIImageView: UIImageView!
-    
     @IBOutlet weak var takeCameraView: UIView!
     
     private var speaker = false
@@ -43,7 +37,6 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        speedTactileSlider
         setupAction()
         setupStreaming()
     }
@@ -114,7 +107,8 @@ class ViewController: UIViewController {
         self.startAnimation()
         if sender.state == .began {
             timerUp = Timer.scheduledTimer(withTimeInterval: 0.1, repeats: true, block: {_ in
-                self.send(instruction: "wheels,F") { }
+                let config = ConfigInfo().parseConfig()
+                self.send(instruction: config.up) { }
                 self.upView.showAnimation({})
             })
         } else if sender.state == .ended || sender.state == .cancelled  || sender.state == .failed {
@@ -129,7 +123,8 @@ class ViewController: UIViewController {
         startAnimation()
         if sender.state == .began {
             timerDown = Timer.scheduledTimer(withTimeInterval: 0.1, repeats: true, block: {_ in
-                self.send(instruction: "wheels,B") { }
+                let config = ConfigInfo().parseConfig()
+                self.send(instruction: config.down) { }
                 self.downView.showAnimation({})
             })
         } else if sender.state == .ended || sender.state == .cancelled  || sender.state == .failed  {
@@ -143,7 +138,8 @@ class ViewController: UIViewController {
         startAnimation()
         if sender.state == .began {
             timerLeft = Timer.scheduledTimer(withTimeInterval: 0.1, repeats: true, block: {_ in
-                self.send(instruction: "wheels,R") { }
+                let config = ConfigInfo().parseConfig()
+                self.send(instruction: config.left) { }
                 self.leftView.showAnimation({})
             })
         } else if sender.state == .ended || sender.state == .cancelled {
@@ -157,7 +153,8 @@ class ViewController: UIViewController {
         startAnimation()
         if sender.state == .began {
             timerRight = Timer.scheduledTimer(withTimeInterval: 0.1, repeats: true, block: {_ in
-                self.send(instruction: "wheels,L") { }
+                let config = ConfigInfo().parseConfig()
+                self.send(instruction: config.left) { }
                 self.rightView.showAnimation({})
             })
         } else if sender.state == .ended || sender.state == .cancelled {
@@ -171,7 +168,8 @@ class ViewController: UIViewController {
         startAnimation()
         if sender.state == .began {
             timerRight = Timer.scheduledTimer(withTimeInterval: 0.1, repeats: true, block: {_ in
-                self.send(instruction: "buzzer,1") { }
+                let config = ConfigInfo().parseConfig()
+                self.send(instruction: config.buzzer) { }
                 self.rightView.showAnimation({})
             })
         } else if sender.state == .ended || sender.state == .cancelled {
@@ -184,12 +182,14 @@ class ViewController: UIViewController {
     
     @IBAction func lightTactileAction(_ sender: TactileSlider) {
         let value = Int(sender.value)
-        self.send(instruction: "light,\(String(value))") { }
+        let config = ConfigInfo().parseConfig()
+        self.send(instruction: "\(config.light)\(String(value))") { }
     }
     
     @IBAction func speedTactileAction(_ sender: TactileSlider) {
         let value = Int(sender.value)
-        self.send(instruction: "speed,\(String(value))") { }
+        let config = ConfigInfo().parseConfig()
+        self.send(instruction: "\(config.speed)\(String(value))") { }
     }
     
     

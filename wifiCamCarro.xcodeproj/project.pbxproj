@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1F054EAC2B5E1CAD00544A55 /* Buttons.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1F054EAB2B5E1CAD00544A55 /* Buttons.plist */; };
+		1F054EAE2B5E1DFC00544A55 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F054EAD2B5E1DFC00544A55 /* Config.swift */; };
 		1F05D4442A817A65006C0D5D /* CameraStreamingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F05D4432A817A65006C0D5D /* CameraStreamingService.swift */; };
 		1F09ADFF2A09EB2A00BABD63 /* UDPManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F09ADFE2A09EB2A00BABD63 /* UDPManager.swift */; };
 		1F5FEAB4288BAF1300D8C2B2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F5FEAB3288BAF1300D8C2B2 /* AppDelegate.swift */; };
@@ -25,6 +27,8 @@
 
 /* Begin PBXFileReference section */
 		016435145BCCB58991087ACC /* Pods-wifiCamCarro.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-wifiCamCarro.debug.xcconfig"; path = "Target Support Files/Pods-wifiCamCarro/Pods-wifiCamCarro.debug.xcconfig"; sourceTree = "<group>"; };
+		1F054EAB2B5E1CAD00544A55 /* Buttons.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Buttons.plist; path = Managers/Buttons.plist; sourceTree = "<group>"; };
+		1F054EAD2B5E1DFC00544A55 /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 		1F05D4432A817A65006C0D5D /* CameraStreamingService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraStreamingService.swift; sourceTree = "<group>"; };
 		1F09ADFE2A09EB2A00BABD63 /* UDPManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UDPManager.swift; sourceTree = "<group>"; };
 		1F5FEAB0288BAF1300D8C2B2 /* wifiCamCarro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = wifiCamCarro.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -84,6 +88,7 @@
 				1FD7642C2A836F9C006C8442 /* Extensions */,
 				1FDCAE5B288CFFDF00C9CE7C /* Utils.swift */,
 				1F5FEAB9288BAF1300D8C2B2 /* Main.storyboard */,
+				1F054EAB2B5E1CAD00544A55 /* Buttons.plist */,
 				1F5FEABC288BAF1400D8C2B2 /* Assets.xcassets */,
 				1F5FEABE288BAF1400D8C2B2 /* LaunchScreen.storyboard */,
 				1F5FEAC1288BAF1400D8C2B2 /* Info.plist */,
@@ -114,6 +119,7 @@
 			children = (
 				1F05D4432A817A65006C0D5D /* CameraStreamingService.swift */,
 				1F09ADFE2A09EB2A00BABD63 /* UDPManager.swift */,
+				1F054EAD2B5E1DFC00544A55 /* Config.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -203,6 +209,7 @@
 			files = (
 				1F5FEAC0288BAF1400D8C2B2 /* LaunchScreen.storyboard in Resources */,
 				1F5FEABD288BAF1400D8C2B2 /* Assets.xcassets in Resources */,
+				1F054EAC2B5E1CAD00544A55 /* Buttons.plist in Resources */,
 				1F5FEABB288BAF1300D8C2B2 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -263,6 +270,7 @@
 				1FD7642A2A836E9B006C8442 /* URLViewController.swift in Sources */,
 				1F99684A288DCBB5008A1DB6 /* UIView+Extension.swift in Sources */,
 				1FF748FC2A02AB3E006B25D6 /* Slider.swift in Sources */,
+				1F054EAE2B5E1DFC00544A55 /* Config.swift in Sources */,
 				1F09ADFF2A09EB2A00BABD63 /* UDPManager.swift in Sources */,
 				1FDCAE5C288CFFDF00C9CE7C /* Utils.swift in Sources */,
 			);
