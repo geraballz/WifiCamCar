@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>light</key>
+	<string>light,</string>
+	<key>buzzer</key>
+	<string>buzzer,1</string>
+	<key>speed</key>
+	<string>speed,</string>
+	<key>right</key>
+	<string>wheels,L</string>
+	<key>left</key>
+	<string>wheels,R</string>
+	<key>down</key>
+	<string>wheels,B</string>
+	<key>up</key>
+	<string>wheels,F</string>
+</dict>
+</plist>

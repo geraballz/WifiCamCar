@@ -17,7 +17,6 @@ extension UIView {
     }
     
     func showAnimation(_ completionBlock: @escaping () -> Void) {
-      AudioServicesPlayAlertSound(SystemSoundID(1520))
       isUserInteractionEnabled = false
         UIView.animate(withDuration: 0.1,
                        delay: 0,
