@@ -1,0 +1,12 @@
+/* 
+  Localizable.strings
+  wifiCamCarro
+
+  Created by Gerardo Herrera on 18/02/24.
+  
+*/
+"recording" = "Recording";
+"CamCar" = "CamCar";
+"file_saved" = "File saved succesfully";
+"generic_error" = "There was an error";
+"plase_activate_camera" = "Please, acivate camera";

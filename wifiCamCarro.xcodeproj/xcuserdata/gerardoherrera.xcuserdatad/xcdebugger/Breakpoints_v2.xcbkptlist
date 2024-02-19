@@ -8,7 +8,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "C2635810-2B00-43B6-8D7E-17924B2925A8"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "wifiCarro/ViewController.swift"
@@ -116,7 +116,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "AD2F1F7B-FF6E-44F9-B158-A4A661EB7E04"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "wifiCarro/ViewController.swift"
@@ -164,7 +164,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "1E628FAB-06D6-4E48-8FEB-871375A30E49"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "wifiCamCarro/ViewControllers/URLViewController.swift"
@@ -196,45 +196,45 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "D4214D64-74E3-4944-8FBE-ECE20252BAD2"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "wifiCamCarro/ViewControllers/ViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "208"
-            endingLineNumber = "208"
+            startingLineNumber = "253"
+            endingLineNumber = "253"
             landmarkName = "frame(image:)"
             landmarkType = "7">
             <Locations>
                <Location
-                  uuid = "D4214D64-74E3-4944-8FBE-ECE20252BAD2 - b9b623a973cd93a4"
+                  uuid = "D4214D64-74E3-4944-8FBE-ECE20252BAD2 - f615c4e697331281"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "wifiCamCarro.ViewController.frame(image: __C.UIImage) -&gt; ()"
                   moduleName = "wifiCamCarro"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/gerardoherrera/Documents/xcodeProjects/WIfiCamCarro/wifiCamCarro/ViewControllers/ViewController.swift"
+                  urlString = "file:///Users/gerardoherrera/Documents/xcodeProjects/WifiCamCar/wifiCamCarro/ViewControllers/ViewController.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "209"
-                  endingLineNumber = "209"
+                  startingLineNumber = "329"
+                  endingLineNumber = "329"
                   offsetFromSymbolStart = "248">
                </Location>
                <Location
-                  uuid = "D4214D64-74E3-4944-8FBE-ECE20252BAD2 - b9b623a973cd9245"
+                  uuid = "D4214D64-74E3-4944-8FBE-ECE20252BAD2 - f615c4e69733632e"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "wifiCamCarro.ViewController.frame(image: __C.UIImage) -&gt; ()"
                   moduleName = "wifiCamCarro"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/gerardoherrera/Documents/xcodeProjects/WIfiCamCarro/wifiCamCarro/ViewControllers/ViewController.swift"
+                  urlString = "file:///Users/gerardoherrera/Documents/xcodeProjects/WifiCamCar/wifiCamCarro/ViewControllers/ViewController.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "208"
-                  endingLineNumber = "208"
+                  startingLineNumber = "216"
+                  endingLineNumber = "216"
                   offsetFromSymbolStart = "72">
                </Location>
             </Locations>
@@ -244,7 +244,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "1A1A6811-8C61-4D73-8E58-AF3DCD17B047"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "wifiCamCarro/Managers/CameraStreamingService.swift"
@@ -260,7 +260,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "02F194D7-EEB9-4C32-9DBE-ACDD09A84E46"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "wifiCamCarro/Managers/CameraStreamingService.swift"

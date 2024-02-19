@@ -1,0 +1,27 @@
+
+/* Class = "UIButton"; configuration.title = "GUARDAR"; ObjectID = "7aj-HM-Um7"; */
+"7aj-HM-Um7.configuration.title" = "SAVE";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "7aj-HM-Um7"; */
+"7aj-HM-Um7.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "-"; ObjectID = "FbQ-F2-cQp"; */
+"FbQ-F2-cQp.text" = "-";
+
+/* Class = "UINavigationItem"; title = "Coche Explorador"; ObjectID = "Wel-ZZ-DwF"; */
+"Wel-ZZ-DwF.title" = "Explorer Car";
+
+/* Class = "UILabel"; text = "http PORT"; ObjectID = "x1Z-d2-wZr"; */
+"x1Z-d2-wZr.text" = "http PORT";
+
+/* Class = "UILabel"; text = "Activar Camara"; ObjectID = "xA7-fp-t9M"; */
+"xA7-fp-t9M.text" = "Activate Camera";
+
+/* Class = "UIBarButtonItem"; title = "Item"; ObjectID = "xEM-7u-vpI"; */
+"xEM-7u-vpI.title" = "Item";
+
+/* Class = "UILabel"; text = "URL"; ObjectID = "yRA-J6-ubV"; */
+"yRA-J6-ubV.text" = "URL";
+
+/* Class = "UILabel"; text = "UDP PORT"; ObjectID = "zA7-4f-uxu"; */
+"zA7-4f-uxu.text" = "UDP PORT";

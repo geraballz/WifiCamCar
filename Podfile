@@ -5,5 +5,6 @@ target 'wifiCamCarro' do
   # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
   pod 'TactileSlider'
+  pod 'R.swift'
 
 end
