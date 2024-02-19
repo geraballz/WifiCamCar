@@ -1,20 +1,24 @@
 PODS:
   - R.swift (7.3.2)
+  - SwiftLoader (1.0.0)
   - TactileSlider (3.0.0)
 
 DEPENDENCIES:
   - R.swift
+  - SwiftLoader
   - TactileSlider
 
 SPEC REPOS:
   trunk:
     - R.swift
+    - SwiftLoader
     - TactileSlider
 
 SPEC CHECKSUMS:
   R.swift: 0af0d882f49f03711415cb4e5215daa977d8a480
+  SwiftLoader: f12f3a6fb42576862a3a5eb80c7e59fc881b6982
   TactileSlider: 29d7ece49b13f921f1c8e0952ffba6c0b9c9d19d
 
-PODFILE CHECKSUM: 93ea9ea1b576d8167334580dfca5ae543786a756
+PODFILE CHECKSUM: 0ff7714e3bb6de82b4ed9252f425ae2a9111d9fd
 
 COCOAPODS: 1.11.3

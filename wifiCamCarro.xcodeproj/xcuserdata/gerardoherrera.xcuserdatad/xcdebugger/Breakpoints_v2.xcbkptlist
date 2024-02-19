@@ -202,8 +202,8 @@
             filePath = "wifiCamCarro/ViewControllers/ViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "253"
-            endingLineNumber = "253"
+            startingLineNumber = "256"
+            endingLineNumber = "256"
             landmarkName = "frame(image:)"
             landmarkType = "7">
             <Locations>

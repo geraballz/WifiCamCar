@@ -11,6 +11,7 @@ import SwiftyUserDefaults
 import TactileSlider
 import GameController
 import Photos
+import SwiftLoader
 
 class ViewController: UIViewController {
 
@@ -112,7 +113,9 @@ class ViewController: UIViewController {
                 self.takeVideView.layer.borderWidth = 1
             }
             if arrayImages.count > 1 {
+                SwiftLoader.show(title: R.string.localizable.saving_video(), animated: true)
                 VideoManager().buildVideoFromImageArray(framesArray: self.arrayImages) {
+                    SwiftLoader.hide()
                     self.showAlertWith(title: R.string.localizable.camCar(), message: R.string.localizable.file_saved())
                 } failure: { _ in }
 
