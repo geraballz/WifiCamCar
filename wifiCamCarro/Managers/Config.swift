@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SwiftLoader
 
 struct Config: Decodable {
     private enum CodingKeys: String, CodingKey {
@@ -27,5 +28,13 @@ class ConfigInfo {
         let data = try! Data(contentsOf: url)
         let decoder = PropertyListDecoder()
         return try! decoder.decode(Config.self, from: data)
+    }
+    
+    func configureLoader() {
+        var config: SwiftLoader.Config = SwiftLoader.Config()
+        config.size = 150
+        config.spinnerColor = .blue
+        config.foregroundColor = .white
+        config.foregroundAlpha = 0.5
     }
 }
