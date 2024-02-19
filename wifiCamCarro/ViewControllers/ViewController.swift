@@ -9,6 +9,8 @@ import UIKit
 import WebKit
 import SwiftyUserDefaults
 import TactileSlider
+import GameController
+import Photos
 
 class ViewController: UIViewController {
 
@@ -22,13 +24,18 @@ class ViewController: UIViewController {
     @IBOutlet weak var indicatorView: UIActivityIndicatorView!
     @IBOutlet weak var previewStreamingUIImageView: UIImageView!
     @IBOutlet weak var takeCameraView: UIView!
+    @IBOutlet weak var takeVideView: UIView!
     
+    @IBOutlet weak var recordingLabel: UILabel!
+    @IBOutlet weak var toggleCamera: UISwitch!
     private var speaker = false
     var timerUp: Timer?
     var timerDown: Timer?
     var timerLeft: Timer?
     var timerRight: Timer?
     
+    var isVideoRecording = false
+    var arrayImages: [UIImage] = []
     var streamingService: CameraService!
     
     func send(instruction: String, completion: @escaping()->()) {
@@ -78,9 +85,46 @@ class ViewController: UIViewController {
         
         let takePhotoCaptureGesture = UITapGestureRecognizer(target: self, action: #selector(takePhotoCaptureAction))
         takeCameraView.addGestureRecognizer(takePhotoCaptureGesture)
+        let takeVideoCaptureGesture = UITapGestureRecognizer(target: self, action: #selector(takeVideoAction))
+        takeVideView.addGestureRecognizer(takeVideoCaptureGesture)
+    }
+    
+    @objc func takeVideoAction() {
+        guard toggleCamera.isOn else {
+            showAlertWith(title: R.string.localizable.camCar(), message: R.string.localizable.plase_activate_camera())
+            return
+        }
+        isVideoRecording.toggle()
+        if isVideoRecording {
+            recordingLabel.alpha = 1
+            recordingLabel.text = R.string.localizable.recording()
+            UIView.animate(withDuration: 0.5) {
+                self.takeVideView.layer.cornerRadius = 10
+                self.takeVideView.backgroundColor = .red
+            }
+            
+        }else {
+            recordingLabel.alpha = 0
+            UIView.animate(withDuration: 0.5) {
+                self.takeVideView.backgroundColor = .systemRed
+                self.takeVideView.layer.cornerRadius = 20
+                self.takeVideView.layer.borderColor = UIColor.white.cgColor
+                self.takeVideView.layer.borderWidth = 1
+            }
+            if arrayImages.count > 1 {
+                VideoManager().buildVideoFromImageArray(framesArray: self.arrayImages) {
+                    self.showAlertWith(title: R.string.localizable.camCar(), message: R.string.localizable.file_saved())
+                } failure: { _ in }
+
+            }
+        }
     }
     
     @objc func takePhotoCaptureAction() {
+        guard toggleCamera.isOn else {
+            showAlertWith(title: R.string.localizable.camCar(), message: R.string.localizable.plase_activate_camera())
+            return
+        }
         guard let selectedImage = previewStreamingUIImageView.image else {
                     print("Image not found!")
                     return
@@ -91,9 +135,9 @@ class ViewController: UIViewController {
     //MARK: - Add image to Library
     @objc func image(_ image: UIImage, didFinishSavingWithError error: Error?, contextInfo: UnsafeRawPointer) {
            if let error = error {
-               showAlertWith(title: "Error al guardar", message: error.localizedDescription)
+               showAlertWith(title: R.string.localizable.generic_error(), message: error.localizedDescription)
            } else {
-               showAlertWith(title: "Guardar", message: "Imagen almacenada")
+               showAlertWith(title: R.string.localizable.camCar(), message: R.string.localizable.file_saved())
            }
        }
 
@@ -154,7 +198,7 @@ class ViewController: UIViewController {
         if sender.state == .began {
             timerRight = Timer.scheduledTimer(withTimeInterval: 0.1, repeats: true, block: {_ in
                 let config = ConfigInfo().parseConfig()
-                self.send(instruction: config.left) { }
+                self.send(instruction: config.right) { }
                 self.rightView.showAnimation({})
             })
         } else if sender.state == .ended || sender.state == .cancelled {
@@ -198,7 +242,8 @@ class ViewController: UIViewController {
             streamingService.play()
         } else {
             streamingService.stop()
-            previewStreamingUIImageView.image = UIImage(systemName: "stop.fill")
+            previewStreamingUIImageView.image = UIImage(named: "fast-internet")
+            previewStreamingUIImageView.transform = CGAffineTransform(rotationAngle: 0)
         }
     }
 }
@@ -206,6 +251,12 @@ class ViewController: UIViewController {
 extension ViewController: CameraServiceDelegateProtocol {
     func frame(image: UIImage) {
         previewStreamingUIImageView.image = image
+        previewStreamingUIImageView.transform = CGAffineTransform(rotationAngle: CGFloat.pi)
+        if isVideoRecording {
+            self.arrayImages.append(image)
+        }else {
+            self.arrayImages = []
+        }
     }
 }
 

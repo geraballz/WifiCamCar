@@ -17,6 +17,9 @@
 		1F5FEABB288BAF1300D8C2B2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F5FEAB9288BAF1300D8C2B2 /* Main.storyboard */; };
 		1F5FEABD288BAF1400D8C2B2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1F5FEABC288BAF1400D8C2B2 /* Assets.xcassets */; };
 		1F5FEAC0288BAF1400D8C2B2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F5FEABE288BAF1400D8C2B2 /* LaunchScreen.storyboard */; };
+		1F6B41122B82F58400A7118F /* VideoManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F6B41112B82F58400A7118F /* VideoManager.swift */; };
+		1F6B411D2B82FD0C00A7118F /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F6B411C2B82FD0C00A7118F /* R.generated.swift */; };
+		1F6B41202B83006B00A7118F /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1F6B41222B83006B00A7118F /* Localizable.strings */; };
 		1F99684A288DCBB5008A1DB6 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F996849288DCBB5008A1DB6 /* UIView+Extension.swift */; };
 		1FD764282A836E7D006C8442 /* SwiftyUserDefaults in Frameworks */ = {isa = PBXBuildFile; productRef = 1FD764272A836E7D006C8442 /* SwiftyUserDefaults */; };
 		1FD7642A2A836E9B006C8442 /* URLViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FD764292A836E9B006C8442 /* URLViewController.swift */; };
@@ -31,6 +34,7 @@
 		1F054EAD2B5E1DFC00544A55 /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 		1F05D4432A817A65006C0D5D /* CameraStreamingService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraStreamingService.swift; sourceTree = "<group>"; };
 		1F09ADFE2A09EB2A00BABD63 /* UDPManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UDPManager.swift; sourceTree = "<group>"; };
+		1F155F872B8306CA007942A8 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
 		1F5FEAB0288BAF1300D8C2B2 /* wifiCamCarro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = wifiCamCarro.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1F5FEAB3288BAF1300D8C2B2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1F5FEAB5288BAF1300D8C2B2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -39,6 +43,12 @@
 		1F5FEABC288BAF1400D8C2B2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1F5FEABF288BAF1400D8C2B2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1F5FEAC1288BAF1400D8C2B2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1F6B41112B82F58400A7118F /* VideoManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoManager.swift; sourceTree = "<group>"; };
+		1F6B41132B82F80100A7118F /* es-419 */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "es-419"; path = "es-419.lproj/Main.strings"; sourceTree = "<group>"; };
+		1F6B41142B82F80100A7118F /* es-419 */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "es-419"; path = "es-419.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
+		1F6B411C2B82FD0C00A7118F /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
+		1F6B41212B83006B00A7118F /* es-419 */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "es-419"; path = "es-419.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		1F6B41232B83006E00A7118F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		1F996849288DCBB5008A1DB6 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		1FD764292A836E9B006C8442 /* URLViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLViewController.swift; sourceTree = "<group>"; };
 		1FDCAE5B288CFFDF00C9CE7C /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
@@ -83,6 +93,7 @@
 			children = (
 				1F5FEAB3288BAF1300D8C2B2 /* AppDelegate.swift */,
 				1F5FEAB5288BAF1300D8C2B2 /* SceneDelegate.swift */,
+				1F6B411C2B82FD0C00A7118F /* R.generated.swift */,
 				1FD7642B2A836EF5006C8442 /* ViewControllers */,
 				1FD7642D2A836FB5006C8442 /* Managers */,
 				1FD7642C2A836F9C006C8442 /* Extensions */,
@@ -90,6 +101,7 @@
 				1F5FEAB9288BAF1300D8C2B2 /* Main.storyboard */,
 				1F054EAB2B5E1CAD00544A55 /* Buttons.plist */,
 				1F5FEABC288BAF1400D8C2B2 /* Assets.xcassets */,
+				1F6B41222B83006B00A7118F /* Localizable.strings */,
 				1F5FEABE288BAF1400D8C2B2 /* LaunchScreen.storyboard */,
 				1F5FEAC1288BAF1400D8C2B2 /* Info.plist */,
 			);
@@ -118,6 +130,7 @@
 			isa = PBXGroup;
 			children = (
 				1F05D4432A817A65006C0D5D /* CameraStreamingService.swift */,
+				1F6B41112B82F58400A7118F /* VideoManager.swift */,
 				1F09ADFE2A09EB2A00BABD63 /* UDPManager.swift */,
 				1F054EAD2B5E1DFC00544A55 /* Config.swift */,
 			);
@@ -149,6 +162,7 @@
 			buildConfigurationList = 1F5FEAC4288BAF1400D8C2B2 /* Build configuration list for PBXNativeTarget "wifiCamCarro" */;
 			buildPhases = (
 				ADBF5897DB20D20FC0B4099B /* [CP] Check Pods Manifest.lock */,
+				1F6B411B2B82FBEB00A7118F /* ShellScript */,
 				1F5FEAAC288BAF1300D8C2B2 /* Sources */,
 				1F5FEAAD288BAF1300D8C2B2 /* Frameworks */,
 				1F5FEAAE288BAF1300D8C2B2 /* Resources */,
@@ -183,11 +197,12 @@
 			};
 			buildConfigurationList = 1F5FEAAB288BAF1300D8C2B2 /* Build configuration list for PBXProject "wifiCamCarro" */;
 			compatibilityVersion = "Xcode 13.0";
-			developmentRegion = en;
+			developmentRegion = "es-419";
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 				Base,
+				"es-419",
 			);
 			mainGroup = 1F5FEAA7288BAF1300D8C2B2;
 			packageReferences = (
@@ -208,6 +223,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1F5FEAC0288BAF1400D8C2B2 /* LaunchScreen.storyboard in Resources */,
+				1F6B41202B83006B00A7118F /* Localizable.strings in Resources */,
 				1F5FEABD288BAF1400D8C2B2 /* Assets.xcassets in Resources */,
 				1F054EAC2B5E1CAD00544A55 /* Buttons.plist in Resources */,
 				1F5FEABB288BAF1300D8C2B2 /* Main.storyboard in Resources */,
@@ -217,6 +233,25 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		1F6B411B2B82FBEB00A7118F /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				$SRCROOT/R.generated.swift,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n\"$PODS_ROOT/R.swift/rswift\" generate \"$SRCROOT/R.generated.swift\"\n";
+		};
 		774D4661D8C7CF089408EAC2 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -270,9 +305,11 @@
 				1FD7642A2A836E9B006C8442 /* URLViewController.swift in Sources */,
 				1F99684A288DCBB5008A1DB6 /* UIView+Extension.swift in Sources */,
 				1FF748FC2A02AB3E006B25D6 /* Slider.swift in Sources */,
+				1F6B41122B82F58400A7118F /* VideoManager.swift in Sources */,
 				1F054EAE2B5E1DFC00544A55 /* Config.swift in Sources */,
 				1F09ADFF2A09EB2A00BABD63 /* UDPManager.swift in Sources */,
 				1FDCAE5C288CFFDF00C9CE7C /* Utils.swift in Sources */,
+				1F6B411D2B82FD0C00A7118F /* R.generated.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -283,6 +320,8 @@
 			isa = PBXVariantGroup;
 			children = (
 				1F5FEABA288BAF1300D8C2B2 /* Base */,
+				1F6B41132B82F80100A7118F /* es-419 */,
+				1F155F872B8306CA007942A8 /* en */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -291,8 +330,18 @@
 			isa = PBXVariantGroup;
 			children = (
 				1F5FEABF288BAF1400D8C2B2 /* Base */,
+				1F6B41142B82F80100A7118F /* es-419 */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		1F6B41222B83006B00A7118F /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1F6B41212B83006B00A7118F /* es-419 */,
+				1F6B41232B83006E00A7118F /* en */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -302,6 +351,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
@@ -362,6 +412,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
@@ -423,6 +474,7 @@
 				DEVELOPMENT_TEAM = 5M234ELRUU;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = wifiCamCarro/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "Please allow access to save photo in your photo library";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
@@ -453,6 +505,7 @@
 				DEVELOPMENT_TEAM = 5M234ELRUU;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = wifiCamCarro/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "Please allow access to save photo in your photo library";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
