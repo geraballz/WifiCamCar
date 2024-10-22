@@ -10,11 +10,12 @@ import SwiftLoader
 
 struct Config: Decodable {
     private enum CodingKeys: String, CodingKey {
-        case light, buzzer, speed, right, left, up, down
+        case light, buzzer, color, speed, right, left, up, down
     }
 
     let light: String
     let buzzer: String
+    let color: String
     let speed: String
     let right: String
     let left: String

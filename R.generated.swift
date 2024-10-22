@@ -79,7 +79,7 @@ struct _R {
       let source: RswiftResources.StringResource.Source
     }
 
-    /// This `_R.string.localizable` struct is generated, and contains static references to 6 localization keys.
+    /// This `_R.string.localizable` struct is generated, and contains static references to 7 localization keys.
     struct localizable {
       let source: RswiftResources.StringResource.Source
 
@@ -89,6 +89,13 @@ struct _R {
       ///
       /// Locales: es-419, en
       var camCar: RswiftResources.StringResource { .init(key: "CamCar", tableName: "Localizable", source: source, developmentValue: "CamCar", comment: nil) }
+
+      /// es-419 translation: Comandos
+      ///
+      /// Key: commands
+      ///
+      /// Locales: es-419, en
+      var commands: RswiftResources.StringResource { .init(key: "commands", tableName: "Localizable", source: source, developmentValue: "Comandos", comment: nil) }
 
       /// es-419 translation: Archivo guardado con éxito
       ///
@@ -203,7 +210,7 @@ struct _R {
     var accentColor: RswiftResources.ColorResource { .init(name: "AccentColor", path: [], bundle: bundle) }
   }
 
-  /// This `_R.image` struct is generated, and contains static references to 2 images.
+  /// This `_R.image` struct is generated, and contains static references to 3 images.
   struct image {
     let bundle: Foundation.Bundle
 
@@ -212,6 +219,9 @@ struct _R {
 
     /// Image `gaming-circle`.
     var gamingCircle: RswiftResources.ImageResource { .init(name: "gaming-circle", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
+
+    /// Image `udpcommands`.
+    var udpcommands: RswiftResources.ImageResource { .init(name: "udpcommands", path: [], bundle: bundle, locale: nil, onDemandResourceTags: nil) }
   }
 
   /// This `_R.info` struct is generated, and contains static references to 1 properties.
@@ -271,12 +281,23 @@ struct _R {
     var buttonsPlist: RswiftResources.FileResource { .init(name: "Buttons", pathExtension: "plist", bundle: bundle, locale: LocaleReference.none) }
   }
 
-  /// This `_R.segue` struct is generated, and contains static references to 1 view controllers.
+  /// This `_R.segue` struct is generated, and contains static references to 2 view controllers.
   struct segue {
+    let urlViewController = urlViewController()
     let viewController = viewController()
 
-    /// This struct is generated for `ViewController`, and contains static references to 1 segues.
+    /// This struct is generated for `URLViewController`, and contains static references to 1 segues.
+    struct urlViewController {
+
+      /// Segue identifier `toInfoCommands`.
+      var toInfoCommands: RswiftResources.SegueIdentifier<UIKit.UIStoryboardSegue, URLViewController, InfoCommandsViewController> { .init(identifier: "toInfoCommands") }
+    }
+
+    /// This struct is generated for `ViewController`, and contains static references to 2 segues.
     struct viewController {
+
+      /// Segue identifier `toColors`.
+      var toColors: RswiftResources.SegueIdentifier<UIKit.UIStoryboardSegue, ViewController, ColorViewController> { .init(identifier: "toColors") }
 
       /// Segue identifier `toSettings`.
       var toSettings: RswiftResources.SegueIdentifier<UIKit.UIStoryboardSegue, ViewController, URLViewController> { .init(identifier: "toSettings") }

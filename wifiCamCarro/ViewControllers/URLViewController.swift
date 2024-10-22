@@ -23,12 +23,26 @@ class URLViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         preloadData()
+        //Looks for single or multiple taps.
+             let tap = UITapGestureRecognizer(target: self, action: #selector(UIInputViewController.dismissKeyboard))
+
+            view.addGestureRecognizer(tap)
+    }
+    
+    //Calls this function when the tap is recognized.
+    @objc func dismissKeyboard() {
+        //Causes the view (or one of its embedded text fields) to resign the first responder status.
+        view.endEditing(true)
     }
     
     func preloadData() {
         urlTextField.text = Defaults[\.urlBase]
         httpPortTextField.text = Defaults[\.httpPort]
         udpPortTextField.text = Defaults[\.udpPort]
+    }
+    
+    @IBAction func infoCommandsActions(_ sender: Any) {
+        self.performSegue(withIdentifier: "toInfoCommands", sender: nil)
     }
     
     @IBAction func saveAction(_ sender: Any) {
