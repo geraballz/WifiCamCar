@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="pbT-pn-wyz">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23094" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="pbT-pn-wyz">
     <device id="retina5_9" orientation="landscape" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23084"/>
         <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -38,7 +38,7 @@
                                                                 <rect key="frame" x="76" y="136" width="28" height="28"/>
                                                                 <subviews>
                                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="speaker.wave.2.circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="gPE-xX-ooD">
-                                                                        <rect key="frame" x="0.0" y="0.99999999999999822" width="28" height="26.666666666666664"/>
+                                                                        <rect key="frame" x="0.0" y="0.66666666666666607" width="28" height="26.666666666666671"/>
                                                                         <color key="tintColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
                                                                     </imageView>
                                                                 </subviews>
@@ -189,11 +189,28 @@
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                     <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="trailing" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Xrx-ne-dZc">
-                                                                        <rect key="frame" x="128" y="0.0" width="274" height="20.333333333333332"/>
+                                                                        <rect key="frame" x="128" y="0.0" width="226" height="20.333333333333332"/>
                                                                         <connections>
                                                                             <action selector="toggleActionCamera:" destination="qYd-WP-10P" eventType="valueChanged" id="PYT-j1-5WA"/>
                                                                         </connections>
                                                                     </switch>
+                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s2q-IR-RnN">
+                                                                        <rect key="frame" x="360" y="0.0" width="40" height="20.333333333333332"/>
+                                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                        <constraints>
+                                                                            <constraint firstAttribute="width" constant="40" id="e1F-oG-w53"/>
+                                                                        </constraints>
+                                                                        <state key="normal" title="Button"/>
+                                                                        <buttonConfiguration key="configuration" style="plain"/>
+                                                                        <userDefinedRuntimeAttributes>
+                                                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                                                <integer key="value" value="8"/>
+                                                                            </userDefinedRuntimeAttribute>
+                                                                        </userDefinedRuntimeAttributes>
+                                                                        <connections>
+                                                                            <segue destination="9Fq-Pl-KRC" kind="show" identifier="toColors" id="vdH-8m-KxJ"/>
+                                                                        </connections>
+                                                                    </button>
                                                                 </subviews>
                                                             </stackView>
                                                         </subviews>
@@ -260,7 +277,7 @@
                                                         <rect key="frame" x="672" y="0.0" width="40" height="300"/>
                                                         <subviews>
                                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gauge.with.dots.needle.100percent" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="kcn-or-Fku">
-                                                                <rect key="frame" x="0.0" y="0.99999999999999822" width="40" height="28.666666666666664"/>
+                                                                <rect key="frame" x="0.0" y="0.66666666666666607" width="40" height="28.666666666666671"/>
                                                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="30" id="8eb-Wq-CFl"/>
@@ -296,7 +313,7 @@
                                                                 </connections>
                                                             </view>
                                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gauge.with.dots.needle.0percent" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="rbG-Va-rkJ">
-                                                                <rect key="frame" x="0.0" y="271" width="40" height="28.666666666666686"/>
+                                                                <rect key="frame" x="0.0" y="270.66666666666669" width="40" height="28.666666666666686"/>
                                                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="30" id="Ee5-WJ-c3X"/>
@@ -344,6 +361,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="currentColorButton" destination="s2q-IR-RnN" id="PPC-Jo-L7B"/>
                         <outlet property="downView" destination="8ua-4X-Sj0" id="eTy-hJ-40Z"/>
                         <outlet property="indicatorView" destination="WLC-ki-KQT" id="Nau-8e-CbG"/>
                         <outlet property="leftView" destination="tZs-Y2-dQu" id="9hb-cj-oMe"/>
@@ -362,6 +380,148 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7oD-qk-eYg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1837" y="68"/>
+        </scene>
+        <!--Color View Controller-->
+        <scene sceneID="tYh-7b-vB8">
+            <objects>
+                <viewController id="9Fq-Pl-KRC" customClass="ColorViewController" customModule="wifiCamCarro" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="rIf-wj-n7B">
+                        <rect key="frame" x="0.0" y="0.0" width="812" height="375"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="7RF-KU-r4e">
+                                <rect key="frame" x="50" y="44" width="712" height="310"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="UZt-9j-qzy">
+                                        <rect key="frame" x="0.0" y="0.0" width="712" height="103.33333333333333"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G0w-DV-5zc">
+                                                <rect key="frame" x="0.0" y="0.0" width="237.33333333333334" height="103.33333333333333"/>
+                                                <color key="backgroundColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                        <integer key="value" value="8"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="redViewAction:" destination="9Fq-Pl-KRC" eventType="touchUpInside" id="Idv-hP-fAG"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="swP-aC-SwU">
+                                                <rect key="frame" x="237.33333333333331" y="0.0" width="237.33333333333331" height="103.33333333333333"/>
+                                                <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                        <integer key="value" value="8"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="greenViewAction:" destination="9Fq-Pl-KRC" eventType="touchUpInside" id="t9S-Tp-2aM"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zCh-Yh-ddv">
+                                                <rect key="frame" x="474.66666666666657" y="0.0" width="237.33333333333331" height="103.33333333333333"/>
+                                                <color key="backgroundColor" red="0.0" green="0.43137254899999999" blue="0.72549019609999998" alpha="1" colorSpace="calibratedRGB"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                        <integer key="value" value="8"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="blueViewAction:" destination="9Fq-Pl-KRC" eventType="touchUpInside" id="dAc-0O-1Eh"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="zfj-GC-Ja2">
+                                        <rect key="frame" x="0.0" y="103.33333333333334" width="712" height="103.33333333333334"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZIj-J4-HIj">
+                                                <rect key="frame" x="0.0" y="0.0" width="237.33333333333334" height="103.33333333333333"/>
+                                                <color key="backgroundColor" systemColor="systemYellowColor"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                        <integer key="value" value="8"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="yellowViewAction:" destination="9Fq-Pl-KRC" eventType="touchUpInside" id="st0-1e-zhi"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EZL-Ko-e2J">
+                                                <rect key="frame" x="237.33333333333331" y="0.0" width="237.33333333333331" height="103.33333333333333"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                        <integer key="value" value="8"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="whiteViewAction:" destination="9Fq-Pl-KRC" eventType="touchUpInside" id="AR4-dx-coU"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8c8-f1-BkW">
+                                                <rect key="frame" x="474.66666666666657" y="0.0" width="237.33333333333331" height="103.33333333333333"/>
+                                                <color key="backgroundColor" systemColor="systemPinkColor"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                        <integer key="value" value="8"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="pinkViewAction:" destination="9Fq-Pl-KRC" eventType="touchUpInside" id="roW-la-gaB"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="F66-vz-myG">
+                                        <rect key="frame" x="0.0" y="206.66666666666666" width="712" height="103.33333333333334"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zKs-0L-Mqn">
+                                                <rect key="frame" x="0.0" y="0.0" width="712" height="103.33333333333333"/>
+                                                <color key="backgroundColor" systemColor="systemMintColor"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                        <integer key="value" value="8"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="cyanViewAction:" destination="9Fq-Pl-KRC" eventType="touchUpInside" id="aWo-iR-OL2"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="XUL-as-IA6"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="XUL-as-IA6" firstAttribute="bottom" secondItem="7RF-KU-r4e" secondAttribute="bottom" id="2X6-PY-h6m"/>
+                            <constraint firstItem="7RF-KU-r4e" firstAttribute="leading" secondItem="XUL-as-IA6" secondAttribute="leading" id="JaW-BP-8uU"/>
+                            <constraint firstItem="XUL-as-IA6" firstAttribute="trailing" secondItem="7RF-KU-r4e" secondAttribute="trailing" id="Kk8-Rb-UaL"/>
+                            <constraint firstItem="7RF-KU-r4e" firstAttribute="top" secondItem="XUL-as-IA6" secondAttribute="top" id="cIk-rc-Z3l"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="H8t-uh-mBI"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Hao-hh-Uyn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1837" y="1036"/>
         </scene>
         <!--URL View Controller-->
         <scene sceneID="Qjt-jS-4Zj">
@@ -440,16 +600,58 @@
                             <constraint firstItem="iwH-4N-qES" firstAttribute="bottom" secondItem="cnS-hh-2Mn" secondAttribute="bottom" id="naA-hA-WXC"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="qVV-6j-759"/>
+                    <navigationItem key="navigationItem" id="qVV-6j-759">
+                        <barButtonItem key="rightBarButtonItem" title="Info" id="M6H-2N-9gH">
+                            <connections>
+                                <action selector="infoCommandsActions:" destination="0ZR-N6-A7N" id="n7e-Qe-y0I"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="httpPortTextField" destination="Bmf-Ls-HO4" id="fh4-UW-XDz"/>
                         <outlet property="udpPortTextField" destination="HIy-V0-m9P" id="pWR-I2-1O6"/>
                         <outlet property="urlTextField" destination="qeU-ah-Da4" id="oZS-WB-BrA"/>
+                        <segue destination="lx6-RB-Ins" kind="show" identifier="toInfoCommands" id="Nsp-sQ-mgn"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Oso-W6-NXh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2522" y="69"/>
+        </scene>
+        <!--Info Commands View Controller-->
+        <scene sceneID="WQd-g3-5z0">
+            <objects>
+                <viewController id="lx6-RB-Ins" customClass="InfoCommandsViewController" customModule="wifiCamCarro" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="p6p-hA-faS">
+                        <rect key="frame" x="0.0" y="0.0" width="812" height="375"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6IB-gV-1kn">
+                                <rect key="frame" x="50" y="44" width="712" height="310"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="pwt-id-KYq"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6IB-gV-1kn" firstAttribute="top" secondItem="pwt-id-KYq" secondAttribute="top" id="9vN-e5-VYB"/>
+                            <constraint firstItem="pwt-id-KYq" firstAttribute="bottom" secondItem="6IB-gV-1kn" secondAttribute="bottom" id="Lzx-6y-6z9"/>
+                            <constraint firstItem="pwt-id-KYq" firstAttribute="trailing" secondItem="6IB-gV-1kn" secondAttribute="trailing" id="dwD-DY-JGa"/>
+                            <constraint firstItem="6IB-gV-1kn" firstAttribute="leading" secondItem="pwt-id-KYq" secondAttribute="leading" id="gNf-zQ-N6Q"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="eUj-GW-OEC"/>
+                    <connections>
+                        <outlet property="infoWebkit" destination="6IB-gV-1kn" id="GBR-NE-KHc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vRh-DO-pSK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3170" y="68"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="YAx-aY-w6C">
@@ -485,7 +687,16 @@
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemGreenColor">
-            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemMintColor">
+            <color red="0.0" green="0.78039215689999997" blue="0.74509803919999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemPinkColor">
+            <color red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

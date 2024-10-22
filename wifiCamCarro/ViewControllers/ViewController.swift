@@ -5,7 +5,7 @@
 //  Created by Gerardo Herrera on 22/07/22.
 //
 
-import UIKit
+//import UIKit
 import WebKit
 import SwiftyUserDefaults
 import TactileSlider
@@ -26,7 +26,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var previewStreamingUIImageView: UIImageView!
     @IBOutlet weak var takeCameraView: UIView!
     @IBOutlet weak var takeVideView: UIView!
-    
+    @IBOutlet weak var currentColorButton: UIButton!
     @IBOutlet weak var recordingLabel: UILabel!
     @IBOutlet weak var toggleCamera: UISwitch!
     private var speaker = false
@@ -34,6 +34,7 @@ class ViewController: UIViewController {
     var timerDown: Timer?
     var timerLeft: Timer?
     var timerRight: Timer?
+    
     
     var isVideoRecording = false
     var arrayImages: [UIImage] = []
@@ -47,11 +48,16 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         setupAction()
         setupStreaming()
+        
     }
-    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "toSettings" {
             if let vc = segue.destination as? URLViewController {
+                vc.delegate = self
+            }
+        }
+        if segue.identifier == "toColors" {
+            if let vc = segue.destination as? ColorViewController {
                 vc.delegate = self
             }
         }
@@ -59,6 +65,7 @@ class ViewController: UIViewController {
     
     func setupStreaming() {
         guard let link = URL(string:"http://\(Defaults[\.urlBase]):\(Defaults[\.httpPort])") else { return }
+        print(link)
         streamingService = CameraService(delegate: self, url: link)
     }
     
@@ -226,7 +233,6 @@ class ViewController: UIViewController {
         }
     }
     
-    
     @IBAction func lightTactileAction(_ sender: TactileSlider) {
         let value = Int(sender.value)
         let config = ConfigInfo().parseConfig()
@@ -267,5 +273,15 @@ extension ViewController: URLViewDelegate {
     func saveButtonTapped() {
         streamingService.play()
     }
-    
+}
+
+extension ViewController: ColorViewControllerProtocol {
+    func colorSelected(_ code: String, color: UIColor) {
+        startAnimation()
+        let config = ConfigInfo().parseConfig()
+        self.send(instruction: "\(config.color)\(code)") {
+            self.rightView.showAnimation({})
+            self.currentColorButton.backgroundColor = color
+        }
+    }
 }

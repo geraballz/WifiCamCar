@@ -16,5 +16,7 @@
 	<string>wheels,B</string>
 	<key>up</key>
 	<string>wheels,F</string>
+	<key>color</key>
+	<string>color,</string>
 </dict>
 </plist>
